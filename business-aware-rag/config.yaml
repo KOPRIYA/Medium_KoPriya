@@ -1,0 +1,37 @@
+app:
+  name: business-aware-rag
+  environment: dev
+  log_level: INFO
+
+embedding:
+  provider: sentence-transformers
+  model_name: all-MiniLM-L6-v2
+  normalize: true
+
+vector_store:
+  type: faiss
+  index_type: IndexFlatL2
+  top_k: 3
+  persist_path: app/models/faiss_index/
+
+llm:
+  provider: openai
+  model: gpt-4o-mini
+  temperature: 0.2
+  max_tokens: 500
+
+retrieval:
+  use_kpi_boosting: true
+  kpi_weight: 0.3
+
+governance:
+  enabled: true
+  blocked_keywords:
+    - experimental
+    - unsupported
+    - deprecated
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  timeout_seconds: 30

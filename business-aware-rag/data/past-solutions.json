@@ -1,0 +1,14 @@
+
+  {
+    "id": "RAG_001",
+    "description": "Semantic search system for internal documentation",
+    "kpis": ["low_latency", "accuracy", "developer_productivity"],
+    "tech_stack": "Python, FastAPI, VectorDB, LLM"
+  },
+  {
+    "id": "API_002",
+    "description": "High throughput transactional backend",
+    "kpis": ["scalability", "reliability"],
+    "tech_stack": "Java, Spring Boot, Redis, Kubernetes"
+  }
+]
